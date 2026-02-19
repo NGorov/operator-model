@@ -66,6 +66,12 @@ public class Operator {
     @Column
     private String groupChatId;
 
+    @Column(nullable = false)
+    private boolean groupNotificationsEnabled = false;
+
+    @Column(nullable = false)
+    private boolean personalNotificationsEnabled = false;
+
     public String toString() {
         return CommonUtils.capitalize(this.operatorName);
     }
@@ -73,5 +79,4 @@ public class Operator {
     public Operator(Integer id) {
         this.id = id;
     }
-
 }

@@ -1,41 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.provisa</groupId>
-		<artifactId>provisa-parent</artifactId>
-		<version>1.0.0</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
+    <groupId>com.provisa</groupId>
+    <artifactId>operator-model</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
 
-	<artifactId>operator-model</artifactId>
-	<packaging>jar</packaging>
+    <name>Operator Model</name>
+    <description>Shared persistence model for operators and related entities</description>
+    <url>https://github.com/NGorov/operator-model</url>
+    <inceptionYear>2026</inceptionYear>
 
-	<name>operator-model</name>
+    <organization>
+        <name>NGorov</name>
+        <url>https://github.com/NGorov</url>
+    </organization>
 
-	<dependencies>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-		<dependency>
-			<groupId>com.provisa</groupId>
-			<artifactId>commons-core</artifactId>
-		</dependency>
+    <developers>
+        <developer>
+            <id>NGorov</id>
+            <name>NGorov</name>
+            <url>https://github.com/NGorov</url>
+        </developer>
+    </developers>
 
-		<dependency>
-			<groupId>jakarta.persistence</groupId>
-			<artifactId>jakarta.persistence-api</artifactId>
-		</dependency>
+    <scm>
+        <connection>scm:git:https://github.com/NGorov/operator-model.git</connection>
+        <developerConnection>scm:git:git@github.com:NGorov/operator-model.git</developerConnection>
+        <url>https://github.com/NGorov/operator-model</url>
+        <tag>HEAD</tag>
+    </scm>
 
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
-		</dependency>
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
+        <lombok.version>1.18.34</lombok.version>
+        <commons.version>1.0.0</commons.version>
+    </properties>
 
-	</dependencies>
+    <dependencies>
+
+        <dependency>
+            <groupId>com.provisa</groupId>
+            <artifactId>commons-core</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>${jakarta.persistence.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
 
 </project>
